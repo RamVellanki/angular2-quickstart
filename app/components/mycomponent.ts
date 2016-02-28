@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import { MyComponent } from '../app/components/mycomponent';
+
 var HEROES: Hero[] = [
   { "id": 11, "name": "Mr. Nice" },
   { "id": 12, "name": "Narco" },
@@ -21,13 +21,13 @@ interface Hero {
 
 
 @Component({
-    selector: 'my-app',
-    template: '<mycomponent></mycomponent>',
-    directives: [MyComponent] //This is important otherwise it wont work.
+    selector: 'mycomponent',
+    styleUrls: ['app/components/mycomponent.css'],
+    templateUrl:'app/components/mycomponent.html'
 
 })
 
-export class AppComponent{
+export class MyComponent{
     public title = 'Tour of Heroes';
     public heroes = HEROES;
     public selectedHero: Hero;

@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../app/components/mycomponent'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(['angular2/core', '../app/components/mycomponent'], function(exp
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, mycomponent_1;
-    var HEROES, AppComponent;
+    var core_1;
+    var HEROES, MyComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (mycomponent_1_1) {
-                mycomponent_1 = mycomponent_1_1;
             }],
         execute: function() {
             HEROES = [
@@ -33,26 +30,26 @@ System.register(['angular2/core', '../app/components/mycomponent'], function(exp
                 { "id": 19, "name": "Magma" },
                 { "id": 20, "name": "Tornado" }
             ];
-            AppComponent = (function () {
-                function AppComponent() {
+            MyComponent = (function () {
+                function MyComponent() {
                     this.title = 'Tour of Heroes';
                     this.heroes = HEROES;
                 }
-                AppComponent.prototype.onSelect = function (hero) {
+                MyComponent.prototype.onSelect = function (hero) {
                     this.selectedHero = hero;
                 };
-                AppComponent = __decorate([
+                MyComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<mycomponent></mycomponent>',
-                        directives: [mycomponent_1.MyComponent] //This is important otherwise it wont work.
+                        selector: 'mycomponent',
+                        styleUrls: ['app/components/mycomponent.css'],
+                        templateUrl: 'app/components/mycomponent.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], MyComponent);
+                return MyComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("MyComponent", MyComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=mycomponent.js.map
